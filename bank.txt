@@ -1,0 +1,62 @@
+
+print("welcome to xyz bank")
+account_exist=False
+
+while(True):
+    print("select your option")
+    print("1. Create account")
+    print("2. Balance enquiry")
+    print("3.Deposit amount")
+    print("4.withraw amount")
+
+
+
+    option=int(input("Enter Option:"))
+    if option==1:
+        name = input("Enter the name:")
+        balance = int(input("enter balance:"))
+        initial_depsit=balance
+        if initial_depsit < 500:
+            print("===================================")
+            print("Minimum amount should be Rs.500...!")
+            print("===================================")
+
+        else:
+            print("============================")
+            print("\n")
+            print("Account successfully created")
+            print("Account Details:")
+            print("Name:",name," ","Balance:",initial_depsit)
+            print("\n")
+            print("============================")
+
+    account_exist= True
+
+
+    if option==2:
+        try:
+            if account_exist==True:
+                print("Name:",name," ","Balance:",balance,"\n")
+        except:
+            print("===========================================================")
+            print("Create an Account first to continue with the transaction..!")
+            print("===========================================================")
+    if option==3:
+
+        if balance==500 or balance>500:
+            deposit=int(input("Enter the amount to be deposited"))
+            balance+=deposit
+            print("====================================")
+            print("Amount deposited succefully.")
+            print("Balance:",balance)
+
+        else:
+            print("===========================================================")
+            print("Create an Account first to continue with the transaction..!")
+            print("===========================================================")
+
+
+
+
+
+
